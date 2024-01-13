@@ -57,8 +57,12 @@ const writeToFile = ({ title, description, installation, usage, contribution, te
   ${tests}`;
 
 
-// TODO: Create a function to initialize app
-function init() {}
+// TODO: Function to start app
+function init() => {
+    promptUser()
+    .then((answers) => writeFile('NewReadME.md', writeToFile(answers)))
+    .then(() => console.log('Successfully transcribed to readME'))
+    .catch((err) => console.error(err));
+};
 
-// Function call to initialize app
 init();
