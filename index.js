@@ -4,7 +4,7 @@ const { writeFile } = require('fs').promises;
 
 // Questions Array
 const questions = () => {
-    return inquirer.prompt([;
+    return inquirer.prompt([
     {
         type: 'input',
         name: 'title',
@@ -34,11 +34,28 @@ const questions = () => {
         type: 'input',
         name: 'tests',
         message: 'What tests can be run to be sure the application is running correctly?',
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your project:',
+        choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3-Clause', 'None'],
+      },
+      {
+        type: 'input',
+        name: 'github',
+        message: 'What is your github username?',
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
       }
 ]);
+};
 
 // TODO: Create a function to write README file
-const writeToFile = ({ title, description, installation, usage, contribution, tests }) =>
+const writeToFile = ({ title, description, installation, usage, contribution, tests, license, github, email }) =>
   `## ${title}
   
   ## Description
@@ -53,13 +70,24 @@ const writeToFile = ({ title, description, installation, usage, contribution, te
   ## Contributors
   ${contribution} 
 
-  ## Contributors
-  ${tests}`;
+  ## Tests
+  Types of tests users should run:
+  ${tests}
 
+  ## License
+  This application is covered under ${license}.
+
+  ## Questions
+  If you have any questions, feel free to reach out to me:
+
+  - GitHub: https://github.com/${github}
+  - Email: ${email}
+ 
+  `;
 
 // TODO: Function to start app
-function init() => {
-    promptUser()
+const init = () => {
+    questions()
     .then((answers) => writeFile('NewReadME.md', writeToFile(answers)))
     .then(() => console.log('Successfully transcribed to readME'))
     .catch((err) => console.error(err));
