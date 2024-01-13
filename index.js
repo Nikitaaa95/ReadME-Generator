@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// Packages for application
 const inquirer = require('inquirer');
-const fs = require('fs');
+const { writeFile } = require('fs').promises;
 
 // Questions Array
-inquirer
-  .prompt([
+const questions = () => {
+    return inquirer.prompt([;
     {
         type: 'input',
         name: 'title',
@@ -38,7 +38,24 @@ inquirer
 ]);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = ({ title, description, installation, usage, contribution, tests }) =>
+  `## ${title}
+  
+  ## Description
+  ${description}  
+
+  ## Installation
+  ${installation} 
+
+  ## Usage
+  ${usage} 
+
+  ## Contributors
+  ${contribution} 
+
+  ## Contributors
+  ${tests}`;
+
 
 // TODO: Create a function to initialize app
 function init() {}
