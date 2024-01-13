@@ -1,7 +1,10 @@
 // TODO: Include packages needed for this application
+const inquirer = require('inquirer');
+const fs = require('fs');
 
 // Questions Array
-const questions = [
+inquirer
+  .prompt([
     {
         type: 'input',
         name: 'title',
@@ -24,7 +27,7 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'contibution',
+        name: 'contribution',
         message: 'Are there any other parties who contributed to this project?',
       },
       {
@@ -32,7 +35,7 @@ const questions = [
         name: 'tests',
         message: 'What tests can be run to be sure the application is running correctly?',
       }
-];
+]);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
