@@ -56,7 +56,7 @@ const questions = () => {
 
 // TODO: Create a function to write README file
 const writeToFile = ({ title, description, installation, usage, contribution, tests, license, github, email }) =>
-  `## ${title}
+  `# ${title}
   
   ## Description
   ${description}  
@@ -74,8 +74,7 @@ const writeToFile = ({ title, description, installation, usage, contribution, te
   Types of tests users should run:
   ${tests}
 
-  ## License
-  This application is covered under ${license}.
+
 
   ## Questions
   If you have any questions, feel free to reach out to me:
