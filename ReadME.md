@@ -1,35 +1,27 @@
-# ksdjflkj
-  [![License](https://img.shields.io/badge/License-Apache 2.0-brightgreen.svg)](LICENSE)
+# ReadME Generator
+Github Repo - https://github.com/Nikitaaa95/ReadME-Generator
 
-  ## Description
-  sdlfkjsldf
-  
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributors](#Contributors)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  - [License](#License)
-  
-  ## Installation
-  sldkfjslkf
-  
-  ## Usage
-  sdlfkjlsdfkj
-  
-  ## Contributors
-  sldkflkdfj
-  
-  ## Tests  
-  sldkfjlkj
-  
-  ## Questions
-  If you have any questions, feel free to reach out to me:
-  
-  - GitHub: https://github.com/sldkfjl
-  - Email: slkfjlk
-  
-  ## License
-  This application is covered under Apache 2.0.
-  
+## Description
+
+This is a tool to help other software engineers to create a ReadME with information relevant to whatever project they're currently working on.
+
+## Usage
+
+User should pull the code from from the github repo provided and run "npm install inquirer" and then run the index.js and answer the prompts as they appear. Once all the questions have been addressed, a new ReadMe file will be generated.
+
+View the readme and edit it as you like if you want to change formatting or add more details.
+
+### 
+![main page](assets/Screenshot.png)
+
+## Credits
+
+Please see the following sites/resources that were used in my research for this project:
+
+### Developer Code provided directly from bootcamp
+
+### AskBCS Learning Assistant
+-Helped me with debugging the issues I was facing when importing the markdown module
+
+### Guidance on License Badges
+https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
