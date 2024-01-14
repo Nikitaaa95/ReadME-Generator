@@ -2,7 +2,10 @@ function renderLicenseBadge(license) {
   if (license == 'None') {
     return '';
   }
-  return `[![License](https://img.shields.io/badge/License-${license}-brightgreen.svg)](LICENSE)`;
+  return `<div align="right">
+  <img src="https://img.shields.io/badge/License-${license}-brightgreen.svg" alt="License">
+</div>`
+  ;
 }
 
 function renderLicenseLink(license) {
@@ -19,10 +22,10 @@ function renderLicenseSection(license) {
   return `## License
   This application is covered under ${license}.`;
 }
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
+  return `${renderLicenseBadge(data.license)}
+  
+  # ${data.title}
 
   ## Description
   ${data.description}
