@@ -1,6 +1,7 @@
 // Packages for application
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
+const generateMarkdown = require('.utils/generateMarkdown.js');
 
 // Questions Array
 const questions = () => {
@@ -97,6 +98,11 @@ const init = () => {
     .then((answers) => writeFile('NewReadME.md', writeToFile(answers)))
     .then(() => console.log('Successfully transcribed to readME'))
     .catch((err) => console.error(err));
+
+    const markdownContent = generateMarkdown(answers);
 };
 
 init();
+
+
+
