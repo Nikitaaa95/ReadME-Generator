@@ -92,7 +92,7 @@ const writeToFile = ({ title, description, installation, usage, contribution, te
  
   `;
 
-// TODO: Function to start app
+// Function to start app
 const init = () => {
     questions()
     .then((answers) => writeFile('NewReadME.md', generateMarkdown(answers)))

@@ -1,3 +1,4 @@
+//Function creating badge IF license is valid value
 function renderLicenseBadge(license) {
   if (license == 'None') {
     return '';
@@ -8,6 +9,7 @@ function renderLicenseBadge(license) {
   ;
 }
 
+//Function creating license table of contents entry IF license is valid value
 function renderLicenseLink(license) {
   if (license == 'None') {
     return '';
@@ -15,6 +17,7 @@ function renderLicenseLink(license) {
   return `- [License](#License)`;
 }
 
+//Function creating license section IF license is valid value
 function renderLicenseSection(license) {
   if (license == 'None') {
     return '';
@@ -22,6 +25,8 @@ function renderLicenseSection(license) {
   return `## License
   This application is covered under ${license}.`;
 }
+
+//Generating the readme WITH data from the license information
 function generateMarkdown(data) {
   return `${renderLicenseBadge(data.license)}
   
